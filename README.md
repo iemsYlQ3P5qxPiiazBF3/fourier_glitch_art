@@ -2,7 +2,7 @@
 Fourier Glitch Art
 A thing to f*ck up images using Fourier transforms and glitch art.
 
-It requires 1 file, in the same directory: https://raw.githubusercontent.com/2421a4f1fd43dfb4f8225325c/glitch-art/main/corrupt.sh
+It requires 1 file, in the same directory: https://raw.githubusercontent.com/iemsYlQ3P5qxPiiazBF3/glitch-art/main/corrupt.sh
 
 Phase corruptions are better than Magnitude corruptions, Magnitude corruptions just make blurry messes.
 Examples:
