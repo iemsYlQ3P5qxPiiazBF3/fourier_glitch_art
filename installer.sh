@@ -1,0 +1,12 @@
+#!/bin/bash
+#needs sudo
+echo 'H4sIAAAAAAAAA+1XW2+jRhT2q+dXnGJWazfBwADrrS0/VGpVqVLbVV+z1QrDYGYXDywMSVZJ/nvPcIlx4nZbKTe180kJcM7MuXxnLsdze/TocBCLRaCe7iJwhs8eI9d3FtR9QxcLH+VvXH8xguDxQxuN6kqGJcBTuHqJmNtJXpeclR+KNKzYvEof3sfX6h8Ei8P6u66HanAePpT7+J/Xf/KNveHC3oRVSpJkV7AtWBwM0zXUv/nHYmvAJOEZA16ByC/g53c//kSiXJyzUu6HWEki4SRmhUzhJIw/5lxAXstX8bwQ26FhFLpKZnSvajaZ21FelnUhcfkN5OCig+n09+9//eG3X165uFJmMwMuUUgxqG4KyBRj24Vbdgol+1zzklVAfeqGfuImse/FycZP3lIaeDSI7G3GZZRaYSlvk0B/jgoJaO8ZI03a5D5ETbAkqw4+yx0YdB/nLQ1Gb2uY3iBp8tzlvoch9Y/l4yv7n3oLemf/O9TV+/9JMNz/ZGK6YAEXRS1B7flTyEtIWVaghqJG1LsNKyFPoFs0PBcV6jzUKRrloQo1Pmqa00PmvQIuuExRFaAqy/Pijrk5TGX4CfdwLrIvsGFbLgQX2xmZ8ARMapuejVZfX74+RUNZhiOgDEWc7wiJ8AIDTIELAgjDSo1rw7JUAsasEbEozcFwl4McCV0O3PcpTvPmM8xmxDvQpyyMD/X+8miGwyHBss1U8h2rjDaSSy6bl9WKsCqMCMH0zvAkuZrc4HGa4fHjG/DHCk83sQ/dYmC8dzzvzHu7coLVd7t3GVNJVwWLePIFfDgPs5pV79mZs2sdlWw6u+reZF0KcJuPm060DybhhLT8NOQskUlyrOCooOQeIyj1yJ5V/PRJk3OU10IZCwxCiFKtW7trZaXAhJUMz0hqXqm3G4PIXbHuxO2Ega6rMb2t8aUqcVddZfXwwsD7oidZPb4djqPGIf+tZe+o5TbHxjgc3EdwAuY0CiU08cI1XERgRTOwgcJx57emvDv+uwD8owFw0TJhx+zcrtsFf8x6P870j2YXKONjAw27+Nc7GMcx8GRttpOx2us2m021dqFi7NPa7Ja9ujLXIpdlLaK2smsT2VSbX9YVagQjY/Q5xnDGCR4eHB0iQxX7jM5nqzgn4/GQzI7LAYfXHYOKvfEDRxb38SlOnvvkfRnY9//YQgku6/jhfwP8+/6fYrum7/+nwDP0/4MG2fmL/t95yv6f9g6h79P/cf/v/H3/77z8/l9DQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ+O/iT8B9+70wQAoAAA='|base64 -d > "c0ad6d814d.tar.gz"
+if [ "$(sha256sum c0ad6d814d.tar.gz|head -c 64)" != "32c425c011340889ad574a6f29d48fb55396bf190499cd55095006771672cb7e" ];then
+        echo "32c425c011340889ad574a6f29d48fb55396bf190499cd55095006771672cb7e != $(sha256sum c0ad6d814d.tar.gz|head -c 64)"
+        exit
+fi
+yes|tar xpzf "c0ad6d814d.tar.gz"
+sudo apt install imagemagick
+ls
+rm "c0ad6d814d.tar.gz"
+exit
